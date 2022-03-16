@@ -6,6 +6,7 @@ Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'mattn/emmet-vim'
+Plug 'morhetz/gruvbox'
 
 Plug 'https://github.com/preservim/nerdtree' 
 Plug 'https://github.com/preservim/tagbar'

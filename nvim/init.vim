@@ -27,7 +27,7 @@ setlocal spell spelllang=en_us,ru_ru
 
 highlight clear SpellBad
 highlight SpellBad cterm=undercurl
-let g:mkdp_auto_start = 1
+let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
 let g:mkdp_preview_options = {
     \ 'mkit': {},
@@ -51,11 +51,12 @@ let g:vim_markdown_follow_anchor =1
 let g:airline_theme = 'dark'
 let g:airline_powerline_fonts = 2
 
-runtime ./theme.vim
+"runtime ./theme.vim
 runtime ./plug.vim
 runtime ./startifyheader.vim
 runtime ./mappings.vim
 
 call lexima#add_rule({'char': '*', 'input_after': '*', 'fileype':'markdown'})
 call lexima#add_rule({'char': '\{', 'input_after': '\}', 'filetype': 'markdown'})
-
+let g:gruvbox_italic=1
+colorscheme gruvbox

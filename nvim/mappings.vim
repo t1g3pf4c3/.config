@@ -21,8 +21,8 @@ nnoremap <leader>D "_D
 nmap - <C-x>
 nmap + <C-a>
 
-nmap <silent> ss :split<Return><C-w>w
-nmap <silent> sv :vsplit<Return><C-w>w
+nmap <silent> - :split<Return><C-w>w
+nmap <silent> _ :vsplit<Return><C-w>w
 nmap 88 ysiw*
 
 nnoremap dw bdw 
