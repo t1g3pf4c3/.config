@@ -1,0 +1,1 @@
+/home/t1g3pf4c3/.bash_history
