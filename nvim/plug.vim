@@ -7,7 +7,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'mattn/emmet-vim'
 Plug 'morhetz/gruvbox'
-
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'https://github.com/preservim/nerdtree' 
 Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/tc50cal/vim-terminal' 
