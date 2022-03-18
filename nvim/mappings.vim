@@ -13,7 +13,10 @@ nmap <silent> H :tabnext<Return>
 nmap <silent> L :tabprev<Return>
 nmap te :tabedit 
 
-nnoremap <leader>x "_x
+
+
+
+nnoremap x "_x
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 nnoremap <leader>D "_D
@@ -25,7 +28,7 @@ nmap <silent> - :split<Return><C-w>w
 nmap <silent> _ :vsplit<Return><C-w>w
 nmap 88 ysiw*
 
-nnoremap dw bdw 
+"nnoremap dw bdw 
 nmap <S-a> gg<S-v>G
 
 inoremap <c-l> <c-^>
