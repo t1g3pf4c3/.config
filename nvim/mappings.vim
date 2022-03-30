@@ -1,4 +1,4 @@
-noremap <silent> <C-Left> :vertical resize +2<CR>
+norema <silent> <C-Left> :vertical resize +2<CR>
 noremap <silent> <C-Right> :vertical resize -2<CR>
 noremap <silent> <C-Down> :resize +2<CR>
 noremap <silent> <C-Up> :resize -2<CR>
@@ -24,13 +24,14 @@ nnoremap <leader>D "_D
 nmap - <C-x>
 nmap + <C-a>
 
-nmap <silent> - :split<Return><C-w>w
-nmap <silent> _ :vsplit<Return><C-w>w
-nmap 88 ysiw*
-
+nmap <silent> - :split<Return><C-w>
+nmap <silent> _ :vsplit<Return><C-w>
+nmap 88 ysiw*l
+nmap 99 ysiw)l
 "nnoremap dw bdw 
 nmap <S-a> gg<S-v>G
 
-inoremap <c-l> <c-^>
+inoremap <Tab> <c-^>
 
 nnoremap F :Files<CR>
+let g:user_emmet_leader_key='<C-m>'

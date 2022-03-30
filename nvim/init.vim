@@ -15,11 +15,13 @@ set showcmd
 set inccommand=split
 set smarttab
 "set nowrap
-
+" Tabstop
+"set listchars=tab:\|\ 
+"set list
 "Ru-special
 set keymap=russian-jcukenwin
 set iminsert=0
-set imsearch=0
+set imsearch=-1
 
 "Spell
 set spell
@@ -33,7 +35,7 @@ let g:mkdp_preview_options = {
     \ 'mkit': {},
     \ 'katex': {},
     \ 'uml': {},
-    \ 'maid': {'theme':'dark'},
+    \ 'maid': {'theme':'base'},
     \ 'disable_sync_scroll': 0,
     \ 'sync_scroll_type': 'middle',
     \ 'hide_yaml_meta': 1,
@@ -60,3 +62,8 @@ call lexima#add_rule({'char': '*', 'input_after': '*', 'fileype':'markdown'})
 call lexima#add_rule({'char': '\{', 'input_after': '\}', 'filetype': 'markdown'})
 let g:gruvbox_italic=1
 colorscheme gruvbox
+
+
+"emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,scss,sass EmmetInstall
