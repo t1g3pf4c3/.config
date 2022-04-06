@@ -1,19 +1,22 @@
 set ignorecase
-set autoindent
-set tabstop=4
+set smartindent
+set backspace=indent,eol,start
+set tabstop=4 " I always keep this 8
 set shiftwidth=4
+set softtabstop=-1 " To use the width of `shiftwidth`
+set expandtab
 set smarttab
-set softtabstop=1
+
+
 set clipboard=unnamedplus
 set conceallevel=2
 set mouse=a
 set nocompatible
 set number
 syntax enable
-set expandtab
 set showcmd
+
 set inccommand=split
-set smarttab
 "set nowrap
 " Tabstop
 "set listchars=tab:\|\ 
@@ -49,7 +52,7 @@ let g:vim_markdown_conceal = 1
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_strikethrough = 1
-let g:vim_markdown_follow_anchor =1
+let g:vim_markdown_follow_anchor = 1
 let g:airline_theme = 'dark'
 let g:airline_powerline_fonts = 2
 
@@ -58,12 +61,43 @@ runtime ./plug.vim
 runtime ./startifyheader.vim
 runtime ./mappings.vim
 
-call lexima#add_rule({'char': '*', 'input_after': '*', 'fileype':'markdown'})
+call lexima#add_rule({'char': '*', 'input_after': '*', 'filetype': 'markdown'})
+call lexima#add_rule({'char': '<BS>', 'at': '*\%#\*', 'delete': 1, 'filetype': 'markdown'})
 call lexima#add_rule({'char': '\{', 'input_after': '\}', 'filetype': 'markdown'})
-let g:gruvbox_italic=1
 colorscheme gruvbox
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_light='medium'
+let g:gruvbox_contrast_dark='soft'
 
 
+nnoremap <F7> :call ThemeFunction()<cr>
+
+function! ThemeFunction()
+    if (&background == 'light')
+        set background=dark
+        echo "background -> dark"
+    else
+        set background=light
+        echo "background -> light"
+    endif
+endfunction
+
+vnoremap / <S-i>//<Esc>
+
+function! ThemeTimer()
+    if(strftime('%H')>18)
+        set background=dark
+    else
+        set background=light
+    endif
+endfunction
+
+call ThemeTimer()
+
+let g:gruvbox_transparent_bg = 1
+"hi Normal guibg=NONE ctermbg=NONE
 "emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,scss,sass EmmetInstall
+
+

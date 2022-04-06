@@ -20,8 +20,10 @@ font:
 window:
   opacity: 0.9
   padding: 
-    x: 20
-    y: 20
+    x: 0
+    y: 0
+  decorations: full
+
 shell:
   program: /bin/bash
   args:
@@ -52,3 +54,5 @@ colors:
     magenta: '0xd3869b'
     cyan:    '0x89b482'
     white:   '0xdfbf8e'
+
+
