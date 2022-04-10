@@ -2,7 +2,7 @@ norema <silent> <C-Left> :vertical resize +2<CR>
 noremap <silent> <C-Right> :vertical resize -2<CR>
 noremap <silent> <C-Down> :resize +1<CR>
 noremap <silent> <C-Up> :resize -1<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <S-Tab> :NERDTreeToggle<CR>
 nmap mp  <Plug>MarkdownPreview
 nmap <F8> :TagbarToggle<CR>
 nnoremap <silent> T :Texplore <CR>
@@ -11,22 +11,26 @@ nmap  f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-s2)
 nmap <silent> H :tabnext<Return>
 nmap <silent> L :tabprev<Return>
-nmap te :tabedit 
+nmap te :tabedit
+
+
 
 nnoremap <C-s> :w<Return>
 
+nnoremap <silent><C-t> >>
+inoremap <silent><C-l> <C-o>l
 
 nnoremap x "_x
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 nnoremap <leader>D "_D
 
-nmap - <C-x>
-nmap + <C-a>
+nmap - <C-a>
+nmap + <C-x>
 
 nmap <silent> <C-w>- :split<Return><C-w>
 nmap <silent> <C-w>_ :vsplit<Return><C-w>
-nmap <silent> <C-w>q :q<Return>
+nmap <silent> <C-w>w q<Return>
 nmap 88 ysiw*l
 nmap 99 ysiw)l
 "vnoremap 8 S*
