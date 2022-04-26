@@ -1,34 +1,43 @@
-set ignorecase
-set smartindent
-set backspace=indent,eol,start
-set tabstop=4 " I always keep this 8
-set shiftwidth=4
-set softtabstop=-1 " To use the width of `shiftwidth`
-set expandtab
-set smarttab
-
-
-set clipboard=unnamedplus
-set conceallevel=2
 set mouse=a
+set clipboard=unnamedplus
 set nocompatible
 set number
 syntax enable
+set fileencodings=utf-8,sjis,euc-jp,latin
+set encoding=utf-8
+set title
+set autoindent
+set nobackup
+set hlsearch
 set showcmd
-
+set cmdheight=1
+set laststatus=2
+set scrolloff=10
+set expandtab
+"let loaded_matchparen = 1
+" indents
+filetype plugin indent on
+set shiftwidth=2
+set tabstop=2
+set ai "Auto indent
+set si "Smart indent
+set nowrap "No Wrap lines
+set backspace=start,eol,indent
 set inccommand=split
-"set nowrap
 " Tabstop
-"set listchars=tab:\|\ 
-"set list
+set listchars=tab:\|\ 
+set list
 "Ru-special
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
 
+
+set cursorline
+
 "Spell
 set spell
-setlocal spell spelllang=en_us,ru_ru
+set spell spelllang=en_us,ru_ru
 
 highlight clear SpellBad
 highlight SpellBad cterm=undercurl
@@ -64,10 +73,14 @@ runtime ./mappings.vim
 call lexima#add_rule({'char': '*', 'input_after': '*', 'filetype': 'markdown'})
 call lexima#add_rule({'char': '<BS>', 'at': '*\%#\*', 'delete': 1, 'filetype': 'markdown'})
 call lexima#add_rule({'char': '\{', 'input_after': '\}', 'filetype': 'markdown'})
-colorscheme gruvbox
+
+colorscheme gruvbox 
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_light='medium'
 let g:gruvbox_contrast_dark='soft'
+set termguicolors
+set background=light
+
 
 
 nnoremap <F7> :call ThemeFunction()<cr>
@@ -100,4 +113,6 @@ let g:gruvbox_transparent_bg = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,scss,sass EmmetInstall
 
-
+lua << EOF
+require('Comment').setup()
+EOF

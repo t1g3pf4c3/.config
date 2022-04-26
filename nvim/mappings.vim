@@ -25,8 +25,8 @@ nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 nnoremap <leader>D "_D
 
-nmap - <C-a>
-nmap + <C-x>
+nmap + <C-a>
+nmap - <C-x>
 
 nmap <silent> <C-w>- :split<Return><C-w>
 nmap <silent> <C-w>_ :vsplit<Return><C-w>
@@ -39,9 +39,14 @@ nmap <S-a> gg<S-v>G
 
 "inoremap <C-;> <c-^>
 
-nnoremap F :Files<CR>
 let g:user_emmet_leader_key='<C-m>'
 let g:user_emmet_expandabbr_key = '<Tab>'
 
 nmap <silent> <A-k> :m -2<Return>
 nmap <silent> <A-j> :m +1<Return>
+
+
+nnoremap F <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
