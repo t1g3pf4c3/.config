@@ -32,7 +32,6 @@ set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
 
-
 set cursorline
 
 "Spell
@@ -57,13 +56,11 @@ let g:mkdp_preview_options = {
     \ 'disable_filename': 0
     \ }
 
-let g:vim_markdown_conceal = 1
+set conceallevel=2
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_follow_anchor = 1
-let g:airline_theme = 'dark'
-let g:airline_powerline_fonts = 2
 
 "runtime ./theme.vim
 runtime ./plug.vim
@@ -74,14 +71,17 @@ call lexima#add_rule({'char': '*', 'input_after': '*', 'filetype': 'markdown'})
 call lexima#add_rule({'char': '<BS>', 'at': '*\%#\*', 'delete': 1, 'filetype': 'markdown'})
 call lexima#add_rule({'char': '\{', 'input_after': '\}', 'filetype': 'markdown'})
 
-colorscheme gruvbox 
 let g:gruvbox_italic = 1
-let g:gruvbox_contrast_light='medium'
+let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='soft'
+let g:gruvbpx_transparent_bg = 1
 set termguicolors
-set background=light
+set background=dark
 
+colorscheme gruvbox 
 
+set t_ZH=^[[3m
+set t_ZR=^[[23m
 
 nnoremap <F7> :call ThemeFunction()<cr>
 
@@ -95,7 +95,6 @@ function! ThemeFunction()
     endif
 endfunction
 
-vnoremap / <S-i>//<Esc>
 
 function! ThemeTimer()
     if(strftime('%H')>18)
@@ -105,8 +104,7 @@ function! ThemeTimer()
     endif
 endfunction
 
-call ThemeTimer()
-
+" call ThemeTimer()
 let g:gruvbox_transparent_bg = 1
 "hi Normal guibg=NONE ctermbg=NONE
 "emmet
@@ -116,3 +114,7 @@ autocmd FileType html,css,scss,sass EmmetInstall
 lua << EOF
 require('Comment').setup()
 EOF
+
+
+autocmd Filetype markdown setlocal wrap
+set autoread

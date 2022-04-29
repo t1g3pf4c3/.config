@@ -32,9 +32,9 @@ shell:
     - "tmux attach || tmux"
 
 # # Colors (Gruvbox Material Dark Medium)
-# colors:
-#   primary:
-#     background: '0x282828'
+colors:
+   primary:
+    background: '0x303030'
 #     foreground: '0xdfbf8e'
 #
 #   normal:

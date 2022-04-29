@@ -26,10 +26,10 @@ vnoremap <leader>d "_d
 nnoremap <leader>D "_D
 
 nmap + <C-a>
-nmap - <C-x>
+nmap = <C-x>
 
-nmap <silent> <C-w>- :split<Return><C-w>
-nmap <silent> <C-w>_ :vsplit<Return><C-w>
+nmap <silent> - :split<Return>
+nmap <silent> _ :vsplit<Return>
 nmap <silent> <C-w>w q<Return>
 nmap 88 ysiw*l
 nmap 99 ysiw)l
