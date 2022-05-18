@@ -28,14 +28,18 @@ g.gruvbox_contrast_light='medium'
 g.gruvbox_contrast_dark='soft'
 g.gruvbpx_transparent_bg = 1
 opt.termguicolors = true
---opt.background = "dark" -- or "light" for light mode
+-- opt.background = "light" -- or "light" for light mode
 cmd([[colorscheme gruvbox]])
 function timeTheme()
-	if tonumber(os.date("%H"))>18 then opt.background = "dark"
+	if tonumber(os.date("%H"))>18 then 
+		opt.background = "dark"
+		cmd[[highlight Normal ctermbg=NONE guibg=NONE]]
 	else opt.background = "light" 
 	end
 end
-timeTheme()
+-- timeTheme()
+opt.background = "dark"
+cmd[[highlight Normal ctermbg=NONE guibg=NONE]]
 --------------------------------
 opt.list = true
 opt.listchars:append("space:⋅")
@@ -73,7 +77,7 @@ opt.showcmd = true
 opt.title = true
 opt.number = true
 -- EMMET -------------------------
-g.user_emmet_expandabbr_key='<Tab>e'
+g.user_emmet_expandabbr_key='<C-Z>'
 ----------------------------------
 
 -- Markdown ----------------------
@@ -89,3 +93,12 @@ cmd [[autocmd Filetype markdown setlocal wrap]]
 opt.hlsearch = true
 opt.backup = false
 opt.cmdheight = 1
+
+cmd [[autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>]]
+g.mdip_imgdir = 'img'
+g.mdip_imgdir = 'img'
+
+
+vim.opt.laststatus=3
+
+cmd [[ map f <Plug>(easymotion-prefix) ]]
