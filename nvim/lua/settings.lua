@@ -23,24 +23,6 @@ require('Comment').setup()
 
 require('impatient')
 
--- COLORSCHEME FUNCTIONS --
-g.gruvbox_contrast_light='medium'
-g.gruvbox_contrast_dark='soft'
-g.gruvbpx_transparent_bg = 1
-opt.termguicolors = true
--- opt.background = "light" -- or "light" for light mode
-cmd([[colorscheme gruvbox]])
-function timeTheme()
-	if tonumber(os.date("%H"))>18 then 
-		opt.background = "dark"
-		cmd[[highlight Normal ctermbg=NONE guibg=NONE]]
-	else opt.background = "light" 
-	end
-end
--- timeTheme()
-opt.background = "dark"
-cmd[[highlight Normal ctermbg=NONE guibg=NONE]]
---------------------------------
 opt.list = true
 opt.listchars:append("space:⋅")
 opt.listchars:append("eol:↴")
@@ -98,7 +80,11 @@ cmd [[autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#Markd
 g.mdip_imgdir = 'img'
 g.mdip_imgdir = 'img'
 
+opt.autochdir=true
 
-vim.opt.laststatus=3
+opt.laststatus=3
 
 cmd [[ map f <Plug>(easymotion-prefix) ]]
+-- cmd [[ lcd %:p:h ]]
+
+

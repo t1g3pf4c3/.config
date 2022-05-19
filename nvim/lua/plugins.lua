@@ -15,13 +15,19 @@ return require('packer').startup(function()
     -- LSP
     use 'neovim/nvim-lspconfig' 
     use 'williamboman/nvim-lsp-installer'
+	-- use 'glepnir/lspsaga.nvim'
+	use {
+	  "folke/trouble.nvim",
+	  requires = "kyazdani42/nvim-web-devicons",
+	}
     -- Comments
     use 'numToStr/Comment.nvim'
     -- Highlighting
     use 'nvim-treesitter/nvim-treesitter'
     -- Git
     use 'tpope/vim-fugitive'
-	use 'tpope/vim-rhubarb' -- Fugitive-companion to interact with github
+	-- Fugitive-companion to interact with github
+	use 'tpope/vim-rhubarb'
     -- Tmux integration
     use 'christoomey/vim-tmux-navigator'
     -- Markdown
@@ -44,12 +50,11 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-cmdline' -- cmdline completions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completions
     use 'hrsh7th/cmp-nvim-lsp'   
+	use 'nvim-lua/completion-nvim'
 	-- indent line
     use 'lukas-reineke/indent-blankline.nvim'
 	use 'ap/vim-css-color'
 
-
-	use 'nvim-lua/completion-nvim'
 	use 'nvim-lua/lsp-status.nvim'
 	use 'nvim-lua/popup.nvim'
 	use 'nvim-lua/plenary.nvim'
@@ -78,6 +83,8 @@ return require('packer').startup(function()
 		  'kyazdani42/nvim-web-devicons', -- optional, for file icon
 		}
 	}
+	use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+	-- dap
+	use 'mfussenegger/nvim-dap'
+	use 'theHamsta/nvim-dap-virtual-text'
 end)
-
-
