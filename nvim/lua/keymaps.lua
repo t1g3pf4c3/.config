@@ -37,3 +37,4 @@ map('n', 'gT', ':BufferLineCyclePrev<CR>', default_opts)
 map('n', '<C-Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<C-S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 
+map('n', '<C-S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)

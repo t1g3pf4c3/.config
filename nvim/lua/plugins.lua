@@ -5,11 +5,8 @@ return require('packer').startup(function()
 
     use 'wbthomason/packer.nvim'
     -- Lualine
-    use { 'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function()
-        require('lualine').setup()
-    end, }
+    use  'nvim-lualine/lualine.nvim'
+   
     -- Colortheme
     use { "ellisonleao/gruvbox.nvim" }
     -- LSP
@@ -49,6 +46,7 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path' -- path completions
     use 'hrsh7th/cmp-cmdline' -- cmdline completions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completions
+	use "rafamadriz/friendly-snippets"
     use 'hrsh7th/cmp-nvim-lsp'   
 	use 'nvim-lua/completion-nvim'
 	-- indent line

@@ -1,0 +1,26 @@
+set selection-clipboard clipboard
+set recolor-lightcolor          "#504945" # Background
+set recolor-darkcolor           "#ebdbb2" # Foreground
+
+set default-bg 					"#282828"
+
+set highlight-color             "#fe8019" # Orange
+set highlight-active-color      "#d3869b" # Pink
+
+set inputbar-bg                 "#3c3836" # Background
+set inputbar-fg                 "#ebdbb2" # Foreground
+set statusbar-bg                "#3c3836" # Background
+set statusbar-fg                "#ebdbb2" # Foreground
+
+set index-bg                 "#3c3836" # Background
+set index-fg                 "#ebdbb2" # Foreground
+set index-active-bg          "#665c54" # Background
+set index-active-fg          "#fbf1c7" # Foreground
+
+set notification-bg             "#665c54" # Background
+set notification-fg             "#fbf1c7" # Foreground
+
+set adjust-open "width"
+set recolor true
+
+

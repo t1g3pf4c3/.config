@@ -15,9 +15,7 @@ npairs.setup({
 })
 ------------------------------------
 
-require('lualine').setup{
-    options = { theme = 'gruvbox'}
-}
+
 
 require('Comment').setup()
 
@@ -52,8 +50,8 @@ opt.si = true
 opt.ai = true
 opt.backspace={'start','eol','indent'}
 
-opt.shiftwidth = 4
-opt.tabstop = 4
+opt.shiftwidth = 2
+opt.tabstop = 2
 opt.autoindent = true
 opt.showcmd = true
 opt.title = true
@@ -86,5 +84,6 @@ opt.laststatus=3
 
 cmd [[ map f <Plug>(easymotion-prefix) ]]
 -- cmd [[ lcd %:p:h ]]
-
-
+--
+require("luasnip/loaders/from_vscode").lazy_load()
+require'luasnip'.filetype_extend("javascript", {"react-native"})
