@@ -36,7 +36,6 @@ opt.spell=true
 opt.spelllang= { 'en_us', 'ru' }
 
 opt.cursorline = true
-
 -- Русский -----------------------
 -- opt.keymap = 'russian-jcukenwin'
 -- opt.iminsert = 1
@@ -53,7 +52,7 @@ opt.backspace={'start','eol','indent'}
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.autoindent = true
-opt.showcmd = true
+-- opt.showcmd = true
 opt.title = true
 opt.number = true
 -- EMMET -------------------------
@@ -62,8 +61,7 @@ g.user_emmet_expandabbr_key='<C-Z>'
 
 -- Markdown ----------------------
 -- opt.conceallevel=2
-g.vim_markdown_folding_disabled = 1
-g.vim_markdown_folding_disabled = 1
+-- g.vim_markdown_folding_disabled = 1
 g.vim_markdown_math = 1
 g.vim_markdown_strikethrough = 1
 g.vim_markdown_follow_anchor = 1
