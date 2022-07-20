@@ -1,3 +1,5 @@
 require('plugins')
+require('customization')
 require('settings')
 require('keymaps')
+require('lsp_configure')
